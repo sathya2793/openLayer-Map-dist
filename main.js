@@ -429,12 +429,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _auth_guard_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./auth-guard.service */ "./src/app/dashboard/auth-guard.service.ts");
 /* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../auth.service */ "./src/app/auth.service.ts");
 /* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var angular_resizable_element__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! angular-resizable-element */ "./node_modules/angular-resizable-element/fesm5/angular-resizable-element.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -452,6 +454,7 @@ var DashboardModule = /** @class */ (function () {
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 ngx_spinner__WEBPACK_IMPORTED_MODULE_7__["NgxSpinnerModule"],
+                angular_resizable_element__WEBPACK_IMPORTED_MODULE_8__["ResizableModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild([
                     { path: 'home', component: _home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"], canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_5__["AuthGuardService"]] }
                 ])
@@ -475,7 +478,7 @@ var DashboardModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".dropdown .dropdown-menu {\n  transition: all 0.3s;\n  max-height: 0;\n  display: block;\n  overflow: hidden;\n  opacity: 0;\n}\n\n.dropdown:hover .dropdown-menu {\n  max-height: 200px;\n  opacity: 1;\n  transition: all 1s;\n}\n\n.dropdown-menu>a:hover {\n  background-color: #17a2b8;\n}\n\n#tile {\n  width: 100%;\n  height: 100vh;\n}\n\n#imageMap {\n  width: 100%;\n  height: 100vh;\n}\n\n.sidenav {\n  max-height: 100%;\n  height: 100%;\n  position: fixed;\n  z-index: 99;\n  top: 55px;\n  left: 0;\n  overflow-x: hidden;\n  transition: 0.5s;\n  cursor: none;\n  z-index: 10;\n}\n\n.sidebar-content {\n  height: 50px;\n  font-size: 2rem;\n  font-weight: bold;\n  font-stretch: ultra-expanded;\n  border-bottom-style: solid;\n  border-bottom-color: #17a2b8;\n}\n\n.switch {\n  position: relative;\n  float: right;\n  width: 47px;\n  height: 24px;\n}\n\n.switch input {\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n.slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #ccc;\n  transition: .4s;\n}\n\n.slider:before {\n  position: absolute;\n  content: \"\";\n  height: 16px;\n  width: 16px;\n  left: 4px;\n  bottom: 4px;\n  background-color: white;\n  transition: .4s;\n}\n\ninput:checked+.slider {\n  background-color: #ffc107;\n}\n\ninput:focus+.slider {\n  box-shadow: 0 0 1px #ffc107;\n}\n\ninput:checked+.slider:before {\n  -webkit-transform: translateX(26px);\n  transform: translateX(26px);\n}\n\n/* Rounded sliders */\n\n.slider.round {\n  border-radius: 24px;\n}\n\n.slider.round:before {\n  border-radius: 50%;\n}\n"
+module.exports = ".dropdown .dropdown-menu {\n  transition: all 0.3s;\n  max-height: 0;\n  display: block;\n  overflow: hidden;\n  opacity: 0;\n}\n\n.dropdown:hover .dropdown-menu {\n  max-height: 200px;\n  opacity: 1;\n  transition: all 1s;\n}\n\n.dropdown-menu>a:hover {\n  background-color: #17a2b8;\n}\n\n#tile,#imageMap{\n  width: 100%;\n  height: 100vh;\n}\n\n#cropMap{\n  width: 70%;\n  height: 70vh;\n  overflow: hidden;\n}\n\n#cropMap1{\n  width: 100vw;\n  margin-left: calc(-50vw + 50%);\n  height: 100vh;\n}\n\n.sidenav {\n  max-height: 100%;\n  height: 100%;\n  position: fixed;\n  z-index: 99;\n  top: 55px;\n  left: 0;\n  overflow-x: hidden;\n  transition: 0.5s;\n  cursor: none;\n  z-index: 10;\n}\n\n.sidebar-content {\n  height: 50px;\n  font-size: 2rem;\n  font-weight: bold;\n  font-stretch: ultra-expanded;\n  border-bottom-style: solid;\n  border-bottom-color: #17a2b8;\n}\n\n.switch {\n  position: relative;\n  float: right;\n  width: 47px;\n  height: 24px;\n}\n\n.switch input {\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n.slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #ccc;\n  transition: .4s;\n}\n\n.slider:before {\n  position: absolute;\n  content: \"\";\n  height: 16px;\n  width: 16px;\n  left: 4px;\n  bottom: 4px;\n  background-color: white;\n  transition: .4s;\n}\n\ninput:checked+.slider {\n  background-color: #ffc107;\n}\n\ninput:focus+.slider {\n  box-shadow: 0 0 1px #ffc107;\n}\n\ninput:checked+.slider:before {\n  -webkit-transform: translateX(26px);\n  transform: translateX(26px);\n}\n\n/* Rounded sliders */\n\n.slider.round {\n  border-radius: 24px;\n}\n\n.slider.round:before {\n  border-radius: 50%;\n}"
 
 /***/ }),
 
@@ -486,7 +489,7 @@ module.exports = ".dropdown .dropdown-menu {\n  transition: all 0.3s;\n  max-hei
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\">\n\n<nav class=\"navbar navbar-dark bg-dark\">\n  <a class=\"navbar-brand text-white\">OpenLayers</a>\n  <form class=\"form-inline\">\n    <div class=\"dropdown\">\n      <button class=\"btn btn-outline-info text-white dropdown-toggle\" type=\"button\" id=\"dropdownMenu\" data-toggle=\"dropdown\"\n        aria-haspopup=\"true\" aria-expanded=\"false\">\n        Welcome {{userName}}\n      </button>\n      <div class=\"dropdown-menu bg-dark\" aria-labelledby=\"dropdownMenu\">\n        <a aria-label=\"logout\" title=\"logout\" class=\"btn dropdown-item text-white\" (click)=\"logout()\"><i class=\"fa fa-sign-out mx-2\"></i>Logout</a>\n      </div>\n    </div>\n  </form>\n</nav>\n\n<div id=\"mySidenav\" class=\"sidenav bg-dark border\" *ngIf=\"showSidebar\" [ngStyle]=\"{ 'width' : (showSidebar==false) ? '0px': '260px'  }\">\n  <nav id=\"sidebar\" class=\"sidebar \">\n    <div class=\"sidebar-content text-white text-center\">\n      LAYERS <span style=\"float:right;cursor:pointer;\" (click)=\"hideSidebarScreen()\" ><i class=\"fa mx-1 text-white fa-close\"></i></span>\n    </div>\n    <div class=\"jumbotron jumbotron-fluid mt-1\">\n      <button type=\"button\" class=\"btn btn-info btn-lg btn-block text-left\"  (click)=\"checkbox('tile')\">Tile Layer<label class=\"switch mt-1\">\n            <input type=\"checkbox\" id=\"t\" value=\"tile\" [(ngModel)]=\"tile\" >\n            <span class=\"slider round\"></span>\n          </label></button>\n      <button type=\"button\" class=\"btn btn-info btn-lg btn-block text-left\"  (click)=\"checkbox('raster')\">Raster Layer<label class=\"switch mt-1\">\n            <input type=\"checkbox\" id=\"r\" value=\"raster\" [(ngModel)]=\"raster\">\n            <span class=\"slider round\"></span>\n          </label></button>\n    </div>\n  </nav>\n  \n</div>\n<ngx-spinner\nbdColor = \"rgba(51, 51, 51, 0.8)\" size = \"medium\" color = \"#0de353\" type = \"square-jelly-box\"\n></ngx-spinner> \n<div [ngStyle]=\"{ 'display' : (msg==='tile') ? 'block' : 'none'}\">\n    <div id=\"tile\" class=\"map\"></div>\n    </div>\n    <div *ngIf=\"showSidebar\" (click)=\"hideSidebarScreen()\" style=\" float: left; top:35vh; left:260px; background-color:#6991b8; width:40;height:60; padding:6px; position:fixed;cursor:pointer;\">\n        <span><i class=\"fa fa-2x text-white fa-arrow-circle-left\"></i></span>\n      </div>\n    <div>\n    <div id=\"imageMap\" class=\"map\"></div>\n    </div>\n<!--   \n<app-map [events]=\"eventsSubject.asObservable()\"></app-map>--> \n<div (click)=\"showSidebarScreen()\" style=\"float: left; top: 35vh; left:0; background-color:#6991b8; width:40;height:60; padding:6px; position: fixed;cursor:pointer;\">\n  <span><i class=\"fa fa-2x text-white fa-arrow-circle-right\"></i></span>\n</div>\n</div>"
+module.exports = "<div class=\"wrapper\">\n\n  <nav class=\"navbar navbar-dark bg-dark\">\n    <a class=\"navbar-brand text-white\">OpenLayers</a>\n    <form class=\"form-inline\">\n      <div class=\"dropdown\">\n        <button class=\"btn btn-outline-info text-white dropdown-toggle\" type=\"button\" id=\"dropdownMenu\" data-toggle=\"dropdown\"\n          aria-haspopup=\"true\" aria-expanded=\"false\">\n          Welcome {{userName}}\n        </button>\n        <div class=\"dropdown-menu bg-dark\" aria-labelledby=\"dropdownMenu\">\n          <a aria-label=\"logout\" title=\"logout\" class=\"btn dropdown-item text-white\" (click)=\"logout()\"><i class=\"fa fa-sign-out mx-2\"></i>Logout</a>\n        </div>\n      </div>\n    </form>\n  </nav>\n\n  <div id=\"mySidenav\" class=\"sidenav bg-dark border\" *ngIf=\"showSidebar\" [ngStyle]=\"{ 'width' : (showSidebar==false) ? '0px': '260px'  }\">\n    <nav id=\"sidebar\" class=\"sidebar\" style=\"cursor:default;\">\n      <div class=\"sidebar-content text-white text-center\">\n        LAYERS <span style=\"float:right;cursor:pointer;\" (click)=\"hideSidebarScreen()\"><i class=\"fa mx-1 text-white fa-close\"></i></span>\n      </div>\n      <div class=\"jumbotron jumbotron-fluid mt-1\">\n        <button type=\"button\" class=\"btn btn-info btn-lg btn-block text-left\" (click)=\"checkbox('tile')\">Tile Layer<label\n            class=\"switch mt-1\">\n            <input type=\"checkbox\" id=\"t\" value=\"tile\" [(ngModel)]=\"tile\">\n            <span class=\"slider round\"></span>\n          </label></button>\n        <button type=\"button\" class=\"btn btn-info btn-lg btn-block text-left\" (click)=\"checkbox('raster')\">Raster Layer<label\n            class=\"switch mt-1\">\n            <input type=\"checkbox\" id=\"r\" value=\"raster\" [(ngModel)]=\"raster\">\n            <span class=\"slider round\"></span>\n          </label></button>\n        <button type=\"button\" class=\"btn btn-info btn-lg btn-block text-left\" (click)=\"goToCropImage()\">Static Image<label\n            class=\"switch mt-1\">\n            <input type=\"checkbox\" id=\"i\" value=\"loadImage\" [(ngModel)]=\"loadImage\">\n            <span class=\"slider round\"></span>\n          </label></button>\n      </div>\n      <label *ngIf=\"crop || loadCrop\" class=\"text-white font-weight-bold mx-3\">Map Tools:</label>\n      <div *ngIf=\"crop || loadCrop\">\n        <button type=\"button\" class=\"btn m-3 p-1 text-white\" (click)=\"toggleCrop()\" [ngStyle]=\"{'background-color': loadCrop ? 'green' : 'blue' }\"><i\n            class=\"fa fa-crop mx-2\"></i><span>Crop</span></button>\n      </div>\n    </nav>\n    <p (click)=\"hideSidebarScreen()\" style=\"float: left; top:35vh; left:260px; background-color:#6991b8; width:40;height:60; padding:6px; position:fixed;cursor:pointer;\">\n      <span><i class=\"fa fa-2x text-white fa-arrow-circle-left\"></i></span>\n    </p>\n  </div>\n\n  <ngx-spinner bdColor=\"rgba(51, 51, 51, 0.8)\" size=\"medium\" color=\"#0de353\" type=\"square-jelly-box\"></ngx-spinner>\n\n  <div *ngIf=\"crop\">\n    <div id=\"cropMap\" class='map'></div>\n  </div>\n\n  <div *ngIf=\"loadCrop\" id=\"droppable\">\n    <div *ngIf=\"!crop\" id=\"resize\" class=\"resizable  draggable\">\n      <div id=\"cropMap1\" class=\"map\" contenteditable=\"true\"></div>\n      <div class=\"ui-resizable-handle ui-resizable-nw\"></div>\n      <div class=\"ui-resizable-handle ui-resizable-ne\"></div>\n      <div class=\"ui-resizable-handle ui-resizable-sw\"></div>\n      <div class=\"ui-resizable-handle ui-resizable-se\"></div>\n      <div class=\"ui-resizable-handle ui-resizable-n\"></div>\n      <div class=\"ui-resizable-handle ui-resizable-s\"></div>\n      <div class=\"ui-resizable-handle ui-resizable-e\"></div>\n      <div class=\"ui-resizable-handle ui-resizable-w\"></div>\n    </div>\n    <div class=\"ol-custom-crop btn\" [ngStyle]=\"{'background-color': scrolling ? '#6991b8' : '#0001' }\" style=\"border-radius: 50%;cursor:pointer; position: fixed; display: flex;align-items: center;justify-content: center;bottom: 3em;left:50%;\">\n      <span class=\"fa fa-arrows text-white text-center\" (click)=\"scroll()\"></span>\n    </div>\n    <div class=\"ol-custom-save btn\" style=\"border-radius: 50%;cursor:pointer; position: fixed;bottom: 2em;right: 1em;background-color: transparent;\">\n      <i class=\"fa fa-3x fa-check-circle\"  [ngStyle]=\"{'color': save ? 'lightseagreen' : '#6991b8' }\" (click)=\"savePosition()\"></i>\n    </div>\n  </div>\n\n  <div [ngStyle]=\"{ 'display' : (msg==='tile') ? 'block' : 'none'}\">\n    <div id=\"tile\" class=\"map\"> </div>\n  </div>\n\n  <div *ngIf=\"!crop\">\n    <div id=\"imageMap\" class=\"map\"></div>\n  </div>\n\n  <div (click)=\"showSidebarScreen()\" style=\"float: left; top: 35vh; left:0; background-color:#6991b8; width:40;height:60; padding:6px; position: fixed;cursor:pointer;\">\n    <span><i class=\"fa fa-2x text-white fa-arrow-circle-right\"></i></span>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -510,7 +513,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ol_source_BingMaps_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ol/source/BingMaps.js */ "./node_modules/ol/source/BingMaps.js");
 /* harmony import */ var ol_proj_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ol/proj.js */ "./node_modules/ol/proj.js");
 /* harmony import */ var ol_control_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ol/control.js */ "./node_modules/ol/control.js");
-/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var ol_interaction_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ol/interaction.js */ "./node_modules/ol/interaction.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var ol_source_XYZ__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ol/source/XYZ */ "./node_modules/ol/source/XYZ.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -532,16 +538,27 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
+
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent(titleService, authService, ballLoader) {
+    function HomeComponent(titleService, toastr, authService, ballLoader) {
         var _this = this;
         this.titleService = titleService;
+        this.toastr = toastr;
         this.authService = authService;
         this.ballLoader = ballLoader;
         this.showSidebar = false;
         this.tile = true;
         this.msg = "tile";
+        this.crop = false;
+        this.loadCrop = false;
+        this.scrolling = false;
+        this.style = {};
+        this.save = false;
         this.initilizeMap = function () {
+            _this.crop = false;
+            _this.loadCrop = false;
             if (_this.msg === "tile") {
                 _this.map = new ol_Map__WEBPACK_IMPORTED_MODULE_3__["default"]({
                     controls: Object(ol_control_js__WEBPACK_IMPORTED_MODULE_9__["defaults"])().extend([
@@ -580,6 +597,148 @@ var HomeComponent = /** @class */ (function () {
                 });
             }
         };
+        this.goToCropImage = function () {
+            _this.toastr.info('If Map Is Not Loaded,Please Click Button Again');
+            _this.crop = true;
+            _this.msg = "crop";
+            _this.tile = false;
+            _this.raster = false;
+            _this.loadImage = true;
+            _this.cropImage();
+        };
+        //import XYZ from 'ol/source/XYZ';
+        this.cropImage = function () {
+            $('#cropMap').css({ "margin-left": _this.left_axis, "margin-top": _this.top_axis, "height": _this.height_axis, "width": _this.width_axis });
+            if (_this.crop) {
+                _this.map2 = new ol_Map__WEBPACK_IMPORTED_MODULE_3__["default"]({
+                    target: 'cropMap',
+                    loadTilesWhileInteracting: true,
+                    layers: [
+                        new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_4__["default"]({
+                            preload: Infinity,
+                            source: new ol_source_XYZ__WEBPACK_IMPORTED_MODULE_13__["default"]({
+                                url: 'http://a.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                                crossOrigin: null
+                            }),
+                        })
+                    ],
+                    view: new ol_View__WEBPACK_IMPORTED_MODULE_6__["default"]({
+                        center: [-472202, 7530279],
+                        zoom: 5
+                    }),
+                    interactions: Object(ol_interaction_js__WEBPACK_IMPORTED_MODULE_10__["defaults"])({
+                        doubleClickZoom: false,
+                        dragAndDrop: false,
+                        dragPan: false,
+                        keyboardPan: false,
+                        keyboardZoom: false,
+                        mouseWheelZoom: false,
+                        pointer: false,
+                        select: false
+                    })
+                });
+                var data = {
+                    top: _this.top_axis,
+                    left: _this.left_axis,
+                    hegiht: _this.height_axis,
+                    width: _this.width_axis
+                };
+                console.log("display" + JSON.stringify(data));
+            }
+            else {
+                _this.save = true;
+                $('.resizable').css({ "margin-left": _this.left_axis, "margin-top": _this.top_axis, "height": _this.height_axis, "width": _this.width_axis });
+                $('.resizable').resizable({
+                    handles: {
+                        'nw': '.ui-resizable-nw',
+                        'ne': '.ui-resizable-ne',
+                        'sw': '.ui-resizable-sw',
+                        'se': '.ui-resizable-se',
+                        'n': '.ui-resizable-n',
+                        'e': '.ui-resizable-w',
+                        's': '.ui-resizable-s',
+                        'w': '.ui-resizable-e'
+                    },
+                });
+                $('.draggable').draggable().on('click', function () {
+                    if ($(this).is('.ui-draggable-dragging')) {
+                        return;
+                    }
+                    $(this).draggable('option', 'disabled', true);
+                    $(this).prop('contenteditable', 'true');
+                })
+                    .on('blur', function () {
+                    $(this).draggable('option', 'disabled', false);
+                    $(this).prop('contenteditable', 'false');
+                });
+                _this.map2 = new ol_Map__WEBPACK_IMPORTED_MODULE_3__["default"]({
+                    target: 'cropMap1',
+                    loadTilesWhileInteracting: true,
+                    layers: [
+                        new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_4__["default"]({
+                            preload: Infinity,
+                            source: new ol_source_XYZ__WEBPACK_IMPORTED_MODULE_13__["default"]({
+                                url: 'http://a.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                                crossOrigin: null
+                            }),
+                        })
+                    ],
+                    view: new ol_View__WEBPACK_IMPORTED_MODULE_6__["default"]({
+                        center: [-472202, 7530279],
+                        zoom: 5
+                    }),
+                    interactions: Object(ol_interaction_js__WEBPACK_IMPORTED_MODULE_10__["defaults"])({
+                        doubleClickZoom: true,
+                        dragAndDrop: true,
+                        dragPan: true,
+                        keyboardPan: true,
+                        keyboardZoom: true,
+                        mouseWheelZoom: true,
+                        pointer: true,
+                        select: true
+                    })
+                });
+            }
+        };
+        this.scroll = function () {
+            console.log(_this.scrolling);
+            if (_this.scrolling) {
+                _this.toastr.info('Reset the Crop');
+            }
+            else {
+                _this.toastr.info('If Map Is Not loaded Properly,Please Click Scroll Button Again');
+            }
+            _this.crop = false;
+            _this.cropImage();
+            _this.scrolling = true;
+        };
+        this.toggleCrop = function () {
+            _this.scrolling = false;
+            if (_this.loadCrop) {
+                _this.loadCrop = false;
+            }
+            else {
+                _this.loadCrop = true;
+            }
+            _this.cropImage();
+        };
+        this.savePosition = function () {
+            var link = $("#resize");
+            var offset = link.offset();
+            _this.height_axis = link.height();
+            _this.width_axis = link.width();
+            _this.top_axis = offset.top - 56;
+            _this.left_axis = offset.left;
+            var data = {
+                top: _this.top_axis + "px",
+                left: _this.left_axis + "px",
+                hegiht: _this.height_axis + "px",
+                width: _this.width_axis + "px",
+            };
+            console.log("save" + JSON.stringify(data));
+            localStorage.setItem('postion', JSON.stringify(data));
+            _this.toastr.success('Saved');
+        };
         this.showSidebarScreen = function () {
             _this.showSidebar = true;
         };
@@ -587,7 +746,7 @@ var HomeComponent = /** @class */ (function () {
             _this.showSidebar = false;
         };
         this.checkbox = function (status) {
-            console.log(status);
+            _this.loadImage = false;
             _this.ballLoader.show();
             setTimeout(function () { _this.ballLoader.hide(); }, 1000);
             if (status === "tile") {
@@ -618,15 +777,20 @@ var HomeComponent = /** @class */ (function () {
         };
         this.logout = function () {
             _this.ballLoader.show();
-            setTimeout(function () { _this.ballLoader.hide(); }, 500);
             _this.authService.logout();
+            setTimeout(function () { _this.ballLoader.hide(); }, 500);
         };
     }
     HomeComponent.prototype.ngOnInit = function () {
         this.titleService.setTitle("Home");
         var all = JSON.parse(localStorage.getItem("userInfo"));
-        this.userName = all.displayName !== null ? all.displayName : "Guest";
+        this.userName = all !== null ? all.displayName : "Guest";
         this.initilizeMap();
+        this.pos = JSON.parse(localStorage.getItem("postion"));
+        this.top_axis = this.pos !== null ? this.pos.top : "7vh";
+        this.left_axis = this.pos !== null ? this.pos.left : "10vw";
+        this.height_axis = this.pos !== null ? this.pos.height : "70vh";
+        this.width_axis = this.pos !== null ? this.pos.width : "80%";
     };
     //Map control buttons
     HomeComponent.prototype.handleKeyboardEvent = function (event) {
@@ -667,8 +831,8 @@ var HomeComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./home.component.html */ "./src/app/dashboard/home/home.component.html"),
             styles: [__webpack_require__(/*! ./home.component.css */ "./src/app/dashboard/home/home.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["Title"],
-            src_app_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_10__["NgxSpinnerService"]])
+        __metadata("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["Title"], ngx_toastr__WEBPACK_IMPORTED_MODULE_12__["ToastrService"],
+            src_app_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_11__["NgxSpinnerService"]])
     ], HomeComponent);
     return HomeComponent;
 }());
